@@ -42,11 +42,36 @@ You can use: transcodeTo640x480, transcodeTo720x480, transcodeTo720x576 in the s
 
 You can refer to the methods listed in `Converter.java` to see the list of all types of transcoding that can be performed.
 
-# videoTranscoding_gop_runnable.jar
-This jar file can be run stand alone, you can download it from [here](https://drive.google.com/file/d/0B-fMIDSRxJ_4azB6cDFMaUZJQ2s/view?usp=sharing). The following example transcodes (changes the spatial resolution) to 320x180. The sample video file is provided in the `resources` folder. 
+# videoTranscoding.jar and videoTranscoding_lib.jar
+These two jar files can be run stand alone, you can download it from [here](https://drive.google.com/open?id=0B7qJ6uDkdmXUUWRCaXZ0Qk11YU0). The following example transcodes (changes the codec) to H.264. The sample video file is provided in the `resources` folder. 
 
+### Test source code
 ```java
-e.g. Java -jar videoTranscoding_gop_runnable.jar "./resources/inputvideo" "./resources/outputvideo" "./resources/outputdata"
+String[] args = { "-inputvideo", "/your/directory/of/inputvideo",
+                  "-outputvideo", "/your/directory/of/outputvideo",
+                  "-outputdata", "/your/directory/of/outputdata",
+                  "-oWidth",  "0",             //transcode video to this width, "0" means keep original width
+                  "-oHeight", "0",             //transcode video to this height, "0" means keep original height 
+                  "-framerate", "0",           //transcode video to this frame rate, "0" means keep original frame rate
+                  "-biterate", "0",            //transcode video to this bit rate, "0" means keep original bit rate
+                  "-vcodec", "libx264",        //transcode video to this codec, "null" means keep original codec
+                  "-ofmt", null,               //transcode video to this formate, "null" means keep original formate
+                  "-runtimes", "10"            //transcode how many times
+                  };
+```
+### Test Runnable Jar with command line
+```java
+e.g. Java -jar videoTranscoding_gop_runnable.jar 
+               "./resources/inputvideo" 
+               "./resources/outputvideo" 
+               "./resources/outputdata"
+               "-oWidth",  "0"
+               "-oHeight", "0"
+               "-framerate", "0"
+               "-biterate", "0"
+               "-vcodec", "libx264"
+               "-ofmt", null
+               "-runtimes", "10"
 
 ```
 
