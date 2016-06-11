@@ -1,5 +1,5 @@
 # VideoTranscoding_GOP
-The code splits video files into GOPs and transcodes (i.e. converting spatial resolution) each GOP separately with [FFmpeg](https://ffmpeg.org) wrapped by [Xuggler](http://www.xuggle.com/xuggler/). This code can be used for generating some metadata of the transcoding process. These data can be used for simulation and evaluation purposes. Due to google Xuggler google repository has been removed, user has to manually add xuggler-xuggler-5.4.jar to the project build path library. 
+The code splits video files into GOPs and transcodes (i.e. converting spatial resolution) each GOP separately with [FFmpeg](https://ffmpeg.org) wrapped by [Xuggler](http://www.xuggle.com/xuggler/). This code can be used for generating some metadata of the transcoding process. These data can be used for simulation and evaluation purposes. Due to google Xuggler google repository has been removed, user has to manually add ```xuggler-xuggler-5.4.jar``` to the project build path library. 
 
 Users of this code are requested to cite our paper: 
 
