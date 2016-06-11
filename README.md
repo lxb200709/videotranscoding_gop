@@ -1,5 +1,5 @@
 # VideoTranscoding_GOP
-The code splits video files into GOPs and transcodes (i.e. converting spatial resolution) each GOP separately with [FFmpeg](https://ffmpeg.org) wrapped by [Xuggler](http://www.xuggle.com/xuggler/). This code can be used for generating some metadata of the transcoding process. These data can be used for simulation and evaluation purposes. 
+The code splits video files into GOPs and transcodes (i.e. converting spatial resolution) each GOP separately with [FFmpeg](https://ffmpeg.org) wrapped by [Xuggler](http://www.xuggle.com/xuggler/). This code can be used for generating some metadata of the transcoding process. These data can be used for simulation and evaluation purposes. Due to google Xuggler google repository has been removed, user has to manually add xuggler-xuggler-5.4.jar to the project build path library. 
 
 Users of this code are requested to cite our paper: 
 
@@ -27,8 +27,8 @@ Split each video file into GOP level and transcode each GOP independently. In th
 2. GOP processing metadata (e.g inputsize, outputsize, transcoding time, presenting time etc)
 
 
-# videotranscoding_gop_lib.jar
-This jar file is a library that can be imported to your project. To use that, you need to do the following to transcode the resolution of original video to 320x180:
+# Library videoTranscoding_lib.jar
+This jar file is a library that can be downloaded from [here](https://drive.google.com/open?id=0B7qJ6uDkdmXUUWRCaXZ0Qk11YU0) and imported to your project. With this library, you can transcode a video to any resolution, bit rate, frame rate, codec and formate:
 
 ```java
 import cloudproject.videotranscoding
@@ -36,13 +36,22 @@ import cloudproject.videotranscoding
 String inputUrl = "path/to/your/video/file"
 String outputUrl = "path/to/your/output/folder"
 String dataUrl = "path/to/store/metadata"
+int oWidth = 0;
+int oHight = 0;
+int framerate = 0;
+int bitrate = 0;
+String vodec = null;
+String ofmt = null;
+
+TestTranscoder tt = new TestTranscoder();
+tt.transcodevideo(inputUrl, outputUrl, dataUrl, oWidth, oHeight, framerate, bitrate, vcodec, ofmt)
 
 ```
-You can use: transcodeTo640x480, transcodeTo720x480, transcodeTo720x576 in the similar way
+
 
 You can refer to the methods listed in `Converter.java` to see the list of all types of transcoding that can be performed.
 
-# videoTranscoding.jar and videoTranscoding_lib.jar
+# Runnable videoTranscoding.jar 
 These two jar files can be run stand alone, you can download it from [here](https://drive.google.com/open?id=0B7qJ6uDkdmXUUWRCaXZ0Qk11YU0). The following example transcodes (changes the codec) to H.264. The sample video file is provided in the `resources` folder. 
 
 ### Test source code
