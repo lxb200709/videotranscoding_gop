@@ -37,8 +37,6 @@ String inputUrl = "path/to/your/video/file"
 String outputUrl = "path/to/your/output/folder"
 String dataUrl = "path/to/store/metadata"
 
-TestTranscoder ts = new TestTranscoder();
-ts.transcodeTo320x180(inputUrl, outputUrl, dataUrl);
 ```
 You can use: transcodeTo640x480, transcodeTo720x480, transcodeTo720x576 in the similar way
 
