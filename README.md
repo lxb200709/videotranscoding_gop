@@ -12,7 +12,7 @@ For each GOP, the code will generate the following information:
 - presentation (display) time,
 - and it outputs the whole transcoded video as well.
 
-We have made available the entire source code, the runnable jar, and the library jar (to be imported in your project). The runnable jar can be downloaded from here.
+We have made available the entire source code, the runnable jar, and the library jar (to be imported in your project). The runnable jar can be downloaded from [here](https://drive.google.com/open?id=0B7qJ6uDkdmXUUWRCaXZ0Qk11YU0).
 
 Below is a short explanation on how to work with the code:
 
