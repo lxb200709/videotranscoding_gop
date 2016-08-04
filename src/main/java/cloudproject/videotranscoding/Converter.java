@@ -1081,9 +1081,7 @@ public class Converter
         if (cType == ICodec.Type.CODEC_TYPE_VIDEO && mHasVideo)
         {
           
-       	  iPacketCount++;
-       	  gopInputSize += iPacket.getSize();
-       	  
+       	 
           /**
            * This encoding workflow is pretty much the same as the for the audio
            * above.
@@ -1120,6 +1118,10 @@ public class Converter
         		
         		
         	}
+        	
+            iPacketCount++;
+            gopInputSize += iPacket.getSize();
+          	  
             retval = ic.decodeVideo(inFrame, iPacket, offset);
             
             
