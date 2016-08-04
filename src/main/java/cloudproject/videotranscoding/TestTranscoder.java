@@ -42,25 +42,25 @@ public class TestTranscoder {
 		/*printOutputFile pof = new printOutputFile();  
 	  	pof.printOutToFile("cloudTranscoding_console");*/
 	    
-		/*
-		String[] args = {
-				"-inputvideo", "/home/yamini/Documents/transcoding_resources/inputvideo",
-                "-outputvideo", "/home/yamini/Documents/transcoding_resources/outputvideo",
-                "-outputdata", "/home/yamini/Documents/transcoding_resources/outputdata",
+		
+		String[] argss = {
+				"-inputvideo", "/home/pi/Desktop/videoTrascodingGop/videotranscoding_gop/resources/inputvideo",
+                "-outputvideo", "/home/pi/Desktop/videoTrascodingGop/videotranscoding_gop/resources/outputvideo",
+                "-outputdata", "/home/pi/Desktop/videoTrascodingGop/videotranscoding_gop/resources/outputdata",
                 "-oWidth",  "0",
                 "-oHeight", "0",
                 "-framerate", "0",
                 "-biterate", "0",
                 "-vcodec", "libx264",
                 "-ofmt", null,
-                "-runtimes", "2"
-                };*/
+                "-runtimes", "1"
+                };
 		
 		
 	    ParseCmdLine pcl = new ParseCmdLine();
 		CmdLineParser parser = new CmdLineParser(pcl);
 		try {
-	        parser.parseArgument(args);
+	        parser.parseArgument(argss);
 			
 	        inputVideoFolderURL = pcl.getInputvideoFolderURL();
 		    System.out.println("Input video directory: " +  inputVideoFolderURL);

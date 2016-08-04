@@ -1080,8 +1080,7 @@ public class Converter
         }*/
         if (cType == ICodec.Type.CODEC_TYPE_VIDEO && mHasVideo)
         {
-          
-       	 
+        	iPacketCount++;
           /**
            * This encoding workflow is pretty much the same as the for the audio
            * above.
@@ -1117,9 +1116,8 @@ public class Converter
           	    gopOutputSize = 0; 
         		
         		
-        	}
+        	}       	
         	
-            iPacketCount++;
             gopInputSize += iPacket.getSize();
           	  
             retval = ic.decodeVideo(inFrame, iPacket, offset);
@@ -1184,6 +1182,7 @@ public class Converter
              // outFrame = null;
             }
           }
+          
         }
         else
         {
