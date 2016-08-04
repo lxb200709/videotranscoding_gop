@@ -1118,6 +1118,7 @@ public class Converter
         		
         	}       	
         	
+        	
             gopInputSize += iPacket.getSize();
           	  
             retval = ic.decodeVideo(inFrame, iPacket, offset);
