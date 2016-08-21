@@ -91,4 +91,4 @@ Please note that this jar file is just for testing purposes. If you have specifi
 
 Source code can be found on [github](https://github.com/lxb200709/videotranscoding_gop).
 
-Developed by [Xiangbo Li](https://www.linkedin.com/in/xiangbo-li-2893582a)
+Developed by [Xiangbo Li](https://www.linkedin.com/in/xiangbo-li-2893582a) and Mateus Souza
