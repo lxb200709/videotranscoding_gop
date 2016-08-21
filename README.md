@@ -25,7 +25,7 @@ Split each video file into GOP level and transcode each GOP independently. In th
 
 # Output
 1. Transcoded video streams.
-2. GOP processing metadata (e.g inputsize, outputsize, transcoding time, presenting time etc)
+2. GOP processing metadata (e.g inputsize, outputsize, transcoding time, presenting time and frame number etc.)
 
 
 # Library videoTranscoding_lib.jar
